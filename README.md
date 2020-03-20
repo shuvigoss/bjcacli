@@ -27,6 +27,10 @@ Options:
   -u, --url <download url>  下载地址 (default: "https://codeload.github.com/shuvigoss/weapp-starter/zip/master")
   -n, --projectName <name>  工程名称
   -h, --help                display help for command
+
+#尝试生成一个纯净的微信小程序工程
+bjcacli -n helloworld
+
 ```
 
 TODO:发布到npm registry
