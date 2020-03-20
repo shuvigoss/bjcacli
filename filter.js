@@ -26,7 +26,7 @@ const _filter = (_path, _params) => {
             next()
         })
         .on('end', function () {
-            console.log('finish');
+            utils.info('完成模板替换')
         });
 }
 
