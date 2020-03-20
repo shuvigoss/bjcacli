@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const program = require('commander');
 const download = require('./download')
 const utils = require('./utils')
@@ -29,10 +31,11 @@ const toDownload = (answers) => {
                 utils.deleteFolderRecursive(p)
             })
 
-            utils.copyFolderSync(path.join(p, 'weapp-starter-master'), path.join(__dirname, program.projectName))
-            utils.info(`生成模板工程:${path.join(__dirname, program.projectName)}`)
+            const localTarget = path.join(process.cwd(), program.projectName);
+            utils.copyFolderSync(path.join(p, 'weapp-starter-master'), localTarget)
+            utils.info(`生成模板工程:${localTarget}`)
 
-            filter(path.join(__dirname, program.projectName), params)
+            filter(localTarget, params)
 
         })
         .catch(err => { })

@@ -17,9 +17,9 @@ const _filter = (_path, _params) => {
                     const compiled = __.template(content)
                     const replaced = compiled(_params)
 
-                    fs.writeFile(file, replaced, 'UTF-8', (err) => { console.log(err) })
+                    fs.writeFile(file, replaced, 'UTF-8', (err) => { if (err) console.log(err) })
                 } catch (err) {
-                    utils.error(err)
+                    if (err) utils.error(err)
                 }
 
             })
