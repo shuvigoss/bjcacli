@@ -33,4 +33,7 @@ bjcacli -n helloworld
 
 ```
 
-TODO:发布到npm registry
+# npm安装
+```
+npm install bjcacli -g
+```
