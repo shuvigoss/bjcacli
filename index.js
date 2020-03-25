@@ -8,7 +8,7 @@ const inquirer = require('inquirer');
 const filter = require('./filter');
 
 program
-    .version('1.0.0', '-v, --version')
+    .version('1.0.1', '-v, --version')
     .option('-u, --url <download url>', '下载地址', 'https://codeload.github.com/shuvigoss/weapp-starter/zip/master')
     .requiredOption('-n, --projectName <name>', '工程名称')
     .parse(process.argv)
